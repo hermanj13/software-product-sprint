@@ -22,5 +22,32 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
-    - name: Build with Maven
+    - name: Build portfolio
       run: mvn -B package --file ./portfolio/pom.xml
+    - name: Build Week 1 Stanley
+      run: mvn -B package --file ./walkthroughs/week-1-web-development/examples/stanley/pom.xml
+    - name: Build Week 2 Form Submission
+      run: mvn -B package --file ./walkthroughs/week-2-server/examples/form-submission/pom.xml
+    - name: Build Week 2 Page View Counter
+      run: mvn -B package --file ./walkthroughs/week-2-server/examples/page-view-counter/pom.xml
+    - name: Build Week 2 Server Data
+      run: mvn -B package --file ./walkthroughs/week-2-server/examples/server-date/pom.xml
+    - name: Build Week 2 Server Stats
+      run: mvn -B package --file ./walkthroughs/week-2-server/examples/server-stats/pom.xml
+    - name: Build Week 2 Text Proceesor
+      run: mvn -B package --file ./walkthroughs/week-2-server/examples/text-processor/pom.xml
+
+    - name: Build Week 3 Bigfoot Sightings
+      run: mvn -B package --file ./walkthroughs/week-3-libraries/charts/examples/bigfoot-sightings/pom.xml
+    - name: Build Week 3 Hello World Cloud Storage
+      run: mvn -B package --file ./walkthroughs/week-3-libraries/cloud-storage/examples/hello-world/pom.xml
+    - name: Build Week 3 Todo List Datastore
+      run: mvn -B package --file ./walkthroughs/week-3-libraries/datastore/examples/todo-list/pom.xml
+    - name: Build Week 3 Image Analyzer 
+      run: mvn -B package --file ./walkthroughs/week-3-libraries/image-analysis/examples/image-analyzer/pom.xml
+    - name: Build Week 3 Google Tour
+      run: mvn -B package --file ./walkthroughs/week-3-libraries/maps/examples/google-tour/pom.xml
+    - name: Build Week 3 Sentiment Analyzer
+      run: mvn -B package --file ./walkthroughs/week-3-libraries/sentiment-analysis/examples/sentiment-analyzer/pom.xml
+    - name: Build Week 3 Google Translate
+      run: mvn -B package --file ./walkthroughs/week-3-libraries/translation/examples/minimal-google-translate/pom.xml
