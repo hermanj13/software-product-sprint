@@ -6,4 +6,3 @@ execute this command:
 ```
 mvn package exec:java
 ```
-
